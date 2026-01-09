@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://USERNAME.github.io",
+  site: "https://xujaan.github.io",
   base: "/bytessamakeup",
   output: "static",
 });
