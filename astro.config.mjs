@@ -6,19 +6,28 @@ import node from "@astrojs/node";
 
 // Check if we're in production build (CI/CD or npm run build)
 const isProduction =
-  process.env.NODE_ENV === "production" || process.argv.includes("build");
+  process.env.NODE_ENV === "production" ||
+  process.argv.includes("build") ||
+  process.env.GITHUB_ACTIONS === "true";
+
+console.log("----------------------------------------");
+console.log("DEBUG: NODE_ENV:", process.env.NODE_ENV);
+console.log("DEBUG: argv:", process.argv);
+console.log("DEBUG: npm_lifecycle_event:", process.env.npm_lifecycle_event);
+console.log("DEBUG: isProduction:", isProduction);
+console.log("----------------------------------------");
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://xujaan.github.io",
-  // base: "/bytessamakeup",
+  base: "/bytessamakeup",
   // Use server mode in development for Keystatic admin, static for production
   output: isProduction ? "static" : "server",
-  // adapter: isProduction
-  //   ? undefined
-  //   : node({
-  //       mode: "standalone",
-  //     }),
+  adapter: isProduction
+    ? undefined
+    : node({
+        mode: "standalone",
+      }),
   // Only include Keystatic integration in development
   integrations: isProduction ? [react()] : [react(), keystatic()],
 });
