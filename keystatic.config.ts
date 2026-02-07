@@ -9,6 +9,7 @@ export default config({
     siteSettings: singleton({
       label: 'Site Settings',
       path: 'src/content/siteSettings',
+      format: 'json',
       schema: {
         brandName: fields.text({
           label: 'Brand Name',
@@ -56,6 +57,7 @@ export default config({
     hero: singleton({
       label: 'Hero Section',
       path: 'src/content/hero',
+      format: 'json',
       schema: {
         tagline: fields.text({
           label: 'Tagline',
@@ -109,6 +111,7 @@ export default config({
     about: singleton({
       label: 'About Section',
       path: 'src/content/about',
+      format: 'json',
       schema: {
         label: fields.text({
           label: 'Section Label',
@@ -165,6 +168,7 @@ export default config({
     footer: singleton({
       label: 'Footer Section',
       path: 'src/content/footer',
+      format: 'json',
       schema: {
         ctaTitle: fields.text({
           label: 'CTA Title',
@@ -194,6 +198,7 @@ export default config({
     portfolioConfig: singleton({
       label: 'Portfolio Section Config',
       path: 'src/content/portfolioConfig',
+      format: 'json',
       schema: {
         label: fields.text({
           label: 'Section Label',
@@ -218,6 +223,7 @@ export default config({
     servicesConfig: singleton({
       label: 'Services Section Config',
       path: 'src/content/servicesConfig',
+      format: 'json',
       schema: {
         label: fields.text({
           label: 'Section Label',
@@ -238,6 +244,7 @@ export default config({
     pricelistConfig: singleton({
       label: 'Pricelist Section Config  ',
       path: 'src/content/pricelistConfig',
+      format: 'json',
       schema: {
         label: fields.text({
           label: 'Section Label',

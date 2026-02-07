@@ -2,6 +2,7 @@
   "id": "Wedding",
   "title": "The Wedding",
   "category": "Pernikahan",
-  "description": "Riasan akad & resepsi yang manglingi dan tahan hingga akhir pesta.",
+  "description": "Riasan akad & resepsi yang manglingi dan tahan hingga akhir acara.",
+  "image": "/images/services/wedding/image.jpg",
   "order": 1
 }

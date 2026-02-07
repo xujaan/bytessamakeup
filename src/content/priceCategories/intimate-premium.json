@@ -1,11 +1,11 @@
 {
-  "id": "Intimate",
-  "name": "Akad Intimate",
+  "id": "Intimate-premium",
+  "name": "Akad Intimate Premium",
   "description": "Paket spesial untuk akad atau pemberkatan dengan suasana intim",
   "order": 1,
   "packages": [
     {
-      "name": "Intimate 1",
+      "name": "Intimate Premium 1",
       "price": "1.000.000",
       "popular": false,
       "features": [
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "name": "Intimate 2",
+      "name": "Intimate Premium 2",
       "price": "2.500.000",
       "popular": true,
       "features": [
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "name": "Intimate 3",
+      "name": "Intimate Premium 3",
       "price": "3.800.000",
       "popular": false,
       "features": [

@@ -29,31 +29,37 @@ const services = serviceFiles.map(f => {
       {services.map((service, index) => (
         <div class="service-card" style={`animation-delay: ${index * 0.15}s`}>
           <div class="service-image">
-            <div class="service-image-placeholder">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="80" height="80" rx="10" fill="#D4A5A5"/>
-                <circle cx="50" cy="40" r="15" fill="#E8C4C4"/>
-                <path d="M25 70 Q50 50 75 70" stroke="#B88A8A" stroke-width="3" fill="none"/>
-              </svg>
-              <span>{service.category}</span>
-            </div>
-            
-            <!-- Gold floral overlay for masking effect -->
-            <div class="service-overlay">
-              <svg class="overlay-pattern" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id={`floralPattern-${service.id}`} x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
-                    <circle cx="25" cy="25" r="20" fill="none" stroke="#C9A227" stroke-width="0.5"/>
-                    <circle cx="25" cy="25" r="10" fill="none" stroke="#C9A227" stroke-width="0.5"/>
-                    <path d="M25 5 Q30 15 25 25 Q20 15 25 5" fill="#C9A227" opacity="0.3"/>
-                    <path d="M25 45 Q30 35 25 25 Q20 35 25 45" fill="#C9A227" opacity="0.3"/>
-                    <path d="M5 25 Q15 30 25 25 Q15 20 5 25" fill="#C9A227" opacity="0.3"/>
-                    <path d="M45 25 Q35 30 25 25 Q35 20 45 25" fill="#C9A227" opacity="0.3"/>
-                  </pattern>
-                </defs>
-                <rect width="200" height="200" fill={`url(#floralPattern-${service.id})`}/>
-              </svg>
-            </div>
+            {service.image ? (
+              <img src={service.image} alt={service.title} class="service-image-img" />
+            ) : (
+              <>
+                <div class="service-image-placeholder">
+                  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="10" width="80" height="80" rx="10" fill="#D4A5A5"/>
+                    <circle cx="50" cy="40" r="15" fill="#E8C4C4"/>
+                    <path d="M25 70 Q50 50 75 70" stroke="#B88A8A" stroke-width="3" fill="none"/>
+                  </svg>
+                  <span>{service.category}</span>
+                </div>
+                
+                <!-- Gold floral overlay for masking effect -->
+                <div class="service-overlay">
+                  <svg class="overlay-pattern" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id={`floralPattern-${service.id}`} x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#C9A227" stroke-width="0.5"/>
+                        <circle cx="25" cy="25" r="10" fill="none" stroke="#C9A227" stroke-width="0.5"/>
+                        <path d="M25 5 Q30 15 25 25 Q20 15 25 5" fill="#C9A227" opacity="0.3"/>
+                        <path d="M25 45 Q30 35 25 25 Q20 35 25 45" fill="#C9A227" opacity="0.3"/>
+                        <path d="M5 25 Q15 30 25 25 Q15 20 5 25" fill="#C9A227" opacity="0.3"/>
+                        <path d="M45 25 Q35 30 25 25 Q35 20 45 25" fill="#C9A227" opacity="0.3"/>
+                      </pattern>
+                    </defs>
+                    <rect width="200" height="200" fill={`url(#floralPattern-${service.id})`}/>
+                  </svg>
+                </div>
+              </>
+            )}
           </div>
           
           <div class="service-content">
@@ -139,6 +145,17 @@ const services = serviceFiles.map(f => {
     position: relative;
     aspect-ratio: 3/4;
     overflow: hidden;
+  }
+
+  .service-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .service-card:hover .service-image-img {
+    transform: scale(1.05);
   }
 
   .service-image-placeholder {

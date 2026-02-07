@@ -1,0 +1,50 @@
+{
+  "id": "Intimate-reguler",
+  "name": "Akad Intimate Reguler",
+  "description": "Paket untuk akad sederhana dengan suasana intim",
+  "order": 0,
+  "packages": [
+    {
+      "name": "Intimate Reguler 1",
+      "price": "750.000",
+      "popular": false,
+      "features": [
+        "Makeup Akad",
+        "Kebaya/Dress Sepasang",
+        "Melati Imitasi Premium",
+        "Free Request Look dan Adat",
+        "Henna & Fake Nails",
+        "Free Soflens"
+      ]
+    },
+    {
+      "name": "Intimate Reguler 2",
+      "price": "1.700.000",
+      "popular": true,
+      "features": [
+        "Makeup Akad",
+        "Dekorasi 2M Indoor",
+        "Kebaya/Dress Sepasang",
+        "Free Dekorasi Standar 2 Meter",
+        "Free Request Look dan Adat",
+        "Free Melati Imitasi Premium",
+        "Free Soflens",
+        "Henna & Nails"
+      ]
+    },
+    {
+      "name": "Intimate Reguler 3",
+      "price": "2.700.000",
+      "popular": false,
+      "features": [
+        "Makeup Akad",
+        "Free Dekorasi Standar 2 Meter",
+        "Kebaya & Dress Sepasang",
+        "Free Request Model Dekor",
+        "Free Melati Imitasi Premium & Soflens",
+        "Fotografer",
+        "Henna & Nails"
+      ]
+    }
+  ]
+}
